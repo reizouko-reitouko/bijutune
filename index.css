@@ -1,0 +1,224 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Zen Kaku Gothic New", sans-serif;font-weight: 400;
+    font-style: normal;
+}
+
+/* 全体 */
+.btn-cover{
+    background-color: #ffffff;
+    font-size: 15px;
+    display: flex;
+    /* gap: 6%; */
+    width: 100%;
+    margin: 0px auto;
+    position: fixed;
+    border-bottom: 2px solid #000;
+    z-index: 90;
+
+    .btn-1,.btn-2{
+        display: block;
+        width: 43%;
+        margin: 0 auto;
+        text-align: center;
+        padding: 8px;
+        border-radius: 8px 8px 0px 0px;
+        border: solid #000;
+        border-width: 2px 2px 0px 2px;
+        cursor: pointer;
+        height: 20px;
+        z-index: 85;
+    }
+    .btn-1{
+        background-color: #F78DA7;
+    }
+    .btn-2{
+        background-color:#8ED1FC;
+    }
+}
+
+
+.subpage{
+    display: none;
+    position: absolute;
+    top: 37.6px;
+    width: 100%;
+
+}
+.subpage-1{
+    background-color: #ffffff;
+}
+.subpage-2{
+    background-color: #ffffff;
+}
+.is-subpage-active{
+    display: block;
+}
+
+/* びじゅチューン作品一覧 */
+
+#container{
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    background-color: #ffffff;
+    width: 98%;
+    margin: 0px auto;
+    /* 方眼紙模様に必須のスタイル */
+  background-image: linear-gradient(0deg, transparent calc(100% - 1px), #f0f0f0 calc(100% - 1px)),
+  linear-gradient(90deg, transparent calc(100% - 1px), #d9d9d9 calc(100% - 1px));
+background-size: 16px 16px;
+background-repeat: repeat;
+background-position: center center;
+padding-top: 20px;
+    .item{
+        display: block;
+        width: 190px;
+        height: 264px;
+        height: 348px;
+        border-radius: 12px;
+        margin: 0 auto;
+        border: 1.5px solid #000;
+        /* margin: 2px; */
+        background-color: #ffffff;
+        & img{
+            display: block;
+            width: 173px;
+            height: 98px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 1.5px solid #000;
+        }
+        & a{
+            display: block;
+            width: 173px;
+            height: 98px;
+            margin: 8px auto;
+            
+        }
+        
+    }
+
+
+}
+
+.title{
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.model,.model-author,.model-year,.place{
+    width: 90%;
+    height: auto;
+    font-size: 13px;
+    border-bottom: 1.5px dashed #000;
+    margin: 6px auto;
+    padding: 3px;
+}
+
+/* キャラクター図鑑 */
+#tab{
+    width: 96%;
+    margin: 0 auto;
+    display: flex;
+    padding-top: 20px;
+    /* position: fixed; */
+}
+#tab-btn-cover{
+   display: flex;
+   flex-direction: column;
+   gap: 12px;
+   /* width: 52px;
+   height: 100dvh;
+   overflow: scroll; */
+}
+.tab-btn{
+    writing-mode: vertical-lr;
+    font-size: 13px;
+    text-align: center;
+    background-color: #ab8df7;
+    padding: 8px;
+    border-radius: 8px 0px 0px 8px;
+    border: solid #000;
+    border-width: 2px 0px 2px 2px;
+    cursor: pointer;
+}
+.tab-btn-1{
+    background-color: #F78DA7;
+}
+.tab-btn-2{
+    background-color: #CF2E2E;
+}
+.tab-btn-3{
+    background-color: #FF6900;
+}
+.tab-page{
+    width: 100%;
+    height: 88dvh;
+    background-color: #ffffff;
+    border: 2px solid #000;
+    border-radius: 0px 8px 8px 0px;
+    display: none;
+    padding-top: 20px;
+    overflow-y: scroll;
+
+    /* 方眼紙模様に必須のスタイル */
+  background-image: linear-gradient(0deg, transparent calc(100% - 1px), #f0f0f0 calc(100% - 1px)),
+  linear-gradient(90deg, transparent calc(100% - 1px), #d9d9d9 calc(100% - 1px));
+background-size: 16px 16px;
+background-repeat: repeat;
+background-position: center center;
+
+}
+
+/* #tab-1{
+    background-color: #F78DA7;
+}
+#tab-2{
+    background-color: #CF2E2E;
+}
+#tab-3{
+    background-color: #FF6900;
+} */
+
+.is-tab-page-active{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+
+}
+.box{
+    background-color: #ffffff;
+    width: 264px;
+    margin: 0 auto;
+    padding: 16px;
+    border-radius: 8px;
+    border: 2px solid #000;
+
+
+    & img{
+        width: 164px;
+        height: 164px;
+        object-fit: cover;
+        border-radius: 8px;
+        border: 2px solid #000;
+        display: block;
+        margin: 5px auto;
+    }
+    .name{
+        width: 100%;
+        font-size: 24px;
+        text-align: center;
+        margin: 0 auto;
+        border-bottom: 1px solid #000;
+    }
+    .relate{
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+}
